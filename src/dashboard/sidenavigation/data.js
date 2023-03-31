@@ -1,10 +1,12 @@
 import HomeIcon from './icons/home';
-import BillsIcon from './icons/bills';
+import PeopleIcon from './icons/people';
 import AnalyticsIcon from './icons/analytics';
 import MonitoringIcon from './icons/monitoring';
 import DemographicsIcon from './icons/demographics';
-import ApplicationsIcon from './icons/applications';
-import DocumentationIcon from './icons/documentation';
+import { getNextPatientId } from '../../utils/utils';
+import DashboardIcon from './icons/dashboard';
+
+const patientId = getNextPatientId()
 
 const data = [
   {
@@ -13,24 +15,14 @@ const data = [
     link: '/',
   },
   {
-    title: 'Bills',
-    icon: <BillsIcon />,
-    link: '/admin/bills',
+    title: 'Patients Dashboard',
+    icon: <DashboardIcon />,
+    link: `/patient/${patientId}/dashboard`,
   },
   {
-    title: 'Applications',
-    icon: <ApplicationsIcon />,
-    link: '/admin/applications',
-  },
-  {
-    title: 'Monitoring',
-    icon: <MonitoringIcon />,
-    link: '/admin/monitoring',
-  },
-  {
-    title: 'Demographics',
-    icon: <DemographicsIcon />,
-    link: '/admin/demographics',
+    title: 'Patients',
+    icon: <PeopleIcon />,
+    link: '/admin/patients',
   },
   {
     title: 'Analytics',
@@ -38,9 +30,14 @@ const data = [
     link: '/admin/analytics',
   },
   {
-    title: 'Documentation',
-    icon: <DocumentationIcon />,
-    link: '/admin/documentation',
+    title: 'Games',
+    icon: <MonitoringIcon />,
+    link: '/admin/games',
+  },
+  {
+    title: 'Profile',
+    icon: <DemographicsIcon />,
+    link: '/admin/profile',
   },
 ];
 
