@@ -1,0 +1,72 @@
+[
+	{
+		"name": "John Doe",
+		"picture": "/images/1.jpg",
+		"nextCheckupDate": "2023-04-15",
+		"progressPercentage": 75,
+		"patientId": 1
+	},
+	{
+		"name": "Jane Smith",
+		"picture": "/images/2.jpg",
+		"nextCheckupDate": "2023-05-01",
+		"progressPercentage": 60,
+		"patientId": 2
+	},
+	{
+		"name": "David Lee",
+		"picture": "/images/3.jpg",
+		"nextCheckupDate": "2023-06-10",
+		"progressPercentage": 80,
+		"patientId": 3
+	},
+	{
+		"name": "Mary Johnson",
+		"picture": "/images/4.jpg",
+		"nextCheckupDate": "2023-07-05",
+		"progressPercentage": 50,
+		"patientId": 4
+	},
+	{
+		"name": "Peter Brown",
+		"picture": "/images/5.jpg",
+		"nextCheckupDate": "2023-08-15",
+		"progressPercentage": 90,
+		"patientId": 5
+	},
+	{
+		"name": "Sarah Davis",
+		"picture": "/images/6.jpg",
+		"nextCheckupDate": "2023-09-01",
+		"progressPercentage": 70,
+		"patientId": 6
+	},
+	{
+		"name": "Tom Wilson",
+		"picture": "/images/7.jpg",
+		"nextCheckupDate": "2023-10-10",
+		"progressPercentage": 85,
+		"patientId": 7
+	},
+	{
+		"name": "Emily Jackson",
+		"picture": "/images/8.jpg",
+		"nextCheckupDate": "2023-11-05",
+		"progressPercentage": 55,
+		"patientId": 8
+	},
+	{
+		"name": "Michael Garcia",
+		"picture": "/images/9.jpg",
+		"nextCheckupDate": "2023-12-15",
+		"progressPercentage": 95,
+		"patientId": 9
+	},
+	{
+		"name": "Olivia Taylor",
+		"picture": "/images/10.jpg",
+		"nextCheckupDate": "2024-01-01",
+		"progressPercentage": 65,
+		"patientId": 10
+	}
+]

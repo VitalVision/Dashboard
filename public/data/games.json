@@ -1,0 +1,30 @@
+[
+	{
+		"imageUrl": "/images/1.jpg",
+		"name": "Sort Stack",
+		"rehabTarget": "Field of Vision",
+		"difficulty": "Easy",
+		"gameId": "game1"
+	},
+	{
+		"imageUrl": "/images/2.jpg",
+		"name": "Draw the Line",
+		"rehabTarget": "Memory",
+		"difficulty": "Medium",
+		"gameId": "game2"
+	},
+	{
+		"imageUrl": "/images/3.jpg",
+		"name": "Whack a mole",
+		"rehabTarget": "Hand-eye Coordination",
+		"difficulty": "Hard",
+		"gameId": "game3"
+	},
+	{
+		"imageUrl": "/images/3.jpg",
+		"name": "Whack a mole",
+		"rehabTarget": "Hand-eye Coordination",
+		"difficulty": "Hard",
+		"gameId": "game3"
+	}
+]

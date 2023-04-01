@@ -1,5 +1,5 @@
 import Content from '../../components/content';
 
-export default function SettingsPage() {
-  return <Content title="Settings" />;
+export default function ProfilePage() {
+  return <Content title="Profile" />;
 }
