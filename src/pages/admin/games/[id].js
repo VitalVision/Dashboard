@@ -24,8 +24,12 @@ export default function GamesPage() {
   }, [id]);
 
   return (
-    <Content title={gameData.name}>
-      {gameData ? <GamePage game={gameData} /> : <p>Loading...</p>}
-    </Content>
+    <>
+      {gameData ?
+        <Content title={gameData.name}>
+          <GamePage game={gameData} />
+        </Content>
+        : <p>Loading...</p>}
+    </>
   );
 }

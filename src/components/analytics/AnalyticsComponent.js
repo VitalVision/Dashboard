@@ -27,13 +27,13 @@ const options = {
 
 const AnalyticsComponent = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       <div className="container mx-auto py-4">
         <div className="grid grid-cols-1 gap-4">
           <Disclosure>
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-medium text-left text-black bg-white rounded-lg hover:bg-gray-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+                <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-medium text-left text-black rounded-lg hover:bg-gray-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
                   <span>Bar Chart - Patients per Month</span>
                   <span>{open ? '▼' : '▶'}</span>
                 </Disclosure.Button>
@@ -47,7 +47,7 @@ const AnalyticsComponent = () => {
                   leaveTo="transform opacity-0 scale-95"
                 >
                   <Disclosure.Panel className="px-4 pt-4 pb-2">
-                    <div className="w-full h-64">
+                    <div className="w-full h-96">
                       <Bar data={data} options={options} />
                     </div>
                   </Disclosure.Panel>
@@ -59,7 +59,7 @@ const AnalyticsComponent = () => {
           <Disclosure>
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-medium text-left text-black bg-white rounded-lg hover:bg-gray-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+                <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-medium text-left text-black rounded-lg hover:bg-gray-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
                   <span>Line Chart - Patients per Month</span>
                   <span>{open ? '▼' : '▶'}</span>
                 </Disclosure.Button>
@@ -73,7 +73,7 @@ const AnalyticsComponent = () => {
                   leaveTo="transform opacity-0 scale-95"
                 >
                   <Disclosure.Panel className="px-4 pt-4 pb-2">
-                    <div className="w-full h-64">
+                    <div className="w-full h-96">
                       <Line data={data} options={options} />
                     </div>
                   </Disclosure.Panel>
@@ -85,7 +85,7 @@ const AnalyticsComponent = () => {
           <Disclosure>
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-medium text-left text-black bg-white rounded-lg hover:bg-gray-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+                <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-medium text-left text-black rounded-lg hover:bg-gray-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
                   <span>Pie Chart - Patients per Month</span>
                   <span>{open ? '▼' : '▶'}</span>
                 </Disclosure.Button>
@@ -99,7 +99,7 @@ const AnalyticsComponent = () => {
                   leaveTo="transform opacity-0 scale-95"
                 >
                   <Disclosure.Panel className="px-4 pt-4 pb-2">
-                    <div className="w-full h-64">
+                    <div className="w-full h-96">
                       <Pie data={data} options={options} />
                     </div>
                   </Disclosure.Panel>
