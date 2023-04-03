@@ -8,7 +8,7 @@ const PatientCard = ({ patient }) => {
   return (
     <a href={`/patient/${patientId}/dashboard`}>
       <div
-        className="bg-white shadow-md p-4 w-64 h-auto rounded-md cursor-pointer transition-all duration-200 ease-in-out transform hover:scale-105"
+        className="bg-white shadow-md p-4 w-auto h-auto rounded-md cursor-pointer transition-all duration-200 ease-in-out transform hover:scale-105"
       >
         <div className="flex items-center justify-between mb-3">
           <h2 className="text-xl font-semibold text-gray-700">{name}</h2>
