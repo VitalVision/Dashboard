@@ -18,7 +18,7 @@ export default function PatientPage() {
 
   return (
     <Content title="Patients">
-      <div className="mx-2 my-2 grid grid-cols-1 md:grid-cols-3 gap-4 ">
+      <div className="p-4 grid grid-cols-1 md:grid-cols-3 gap-4 ">
         {patients.map((patient) => (
           <PatientCard patient={patient}
           />))}
