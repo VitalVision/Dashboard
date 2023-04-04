@@ -19,6 +19,7 @@ const patientData = {
   ],
   strokeType: "Ischemic Stroke",
   rehabDuration: "3 months",
+  medicalDisabilities: ["None", "Left Hand Paralysis"],
 };
 
 
