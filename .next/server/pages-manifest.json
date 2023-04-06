@@ -2,7 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/admin/games/[id]": "pages/admin/games/[id].js",
-  "/patient/[id]/dashboard": "pages/patient/[id]/dashboard.js",
-  "/admin/patients": "pages/admin/patients.js"
+  "/api/hello": "pages/api/hello.js"
 }
