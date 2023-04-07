@@ -8,6 +8,7 @@ node_modules
 .next
 /.next
 .next/cache
+.next
 
 
 # env files
@@ -29,4 +30,3 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 node_modules
-.next
