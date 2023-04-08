@@ -3,11 +3,11 @@ import { useToggle } from '../provider/context';
 export default function TopNavigation() {
   const { toggle } = useToggle();
   return (
-    <header className="bg-white h-16 items-center relative shadow w-full z-10 md:h-20">
-      <div className="flex flex-center flex-col h-full justify-center mx-auto px-3 relative">
-        <div className="flex items-center pl-1 relative w-full sm:ml-0 sm:pr-2 lg:max-w-68">
-          <div className="flex left-0 relative w-3/4">
-            <div className="flex group h-full items-center relative w-12">
+    <header className="relative z-10 items-center w-full h-16 bg-white shadow md:h-20">
+      <div className="relative flex flex-col justify-center h-full px-3 mx-auto flex-center">
+        <div className="relative flex items-center w-full pl-1 sm:ml-0 sm:pr-2 lg:max-w-68">
+          <div className="relative left-0 flex w-3/4">
+            <div className="relative flex items-center w-12 h-full group">
               <button
                 type="button"
                 aria-expanded="false"
@@ -19,12 +19,12 @@ export default function TopNavigation() {
               </button>
             </div>
           </div>
-          <div className="flex items-center justify-end ml-5 p-1 relative w-full sm:mr-0 sm:right-auto">
-            <a href="#" className="block relative">
+          <div className="relative flex items-center justify-end w-full p-1 ml-5 sm:mr-0 sm:right-auto">
+            <a href="#" className="relative block">
               <img
                 alt="profile"
-                src="/images/1.jpg"
-                className="h-10 mx-auto object-cover rounded-full w-10"
+                src="/images/1.png"
+                className="object-cover w-10 h-10 mx-auto rounded-full"
               />
             </a>
           </div>

@@ -9,11 +9,11 @@ const patientData = {
   patientId: 1,
   gamesPlayed: [
     {
-      name: "Game 1",
+      name: "Sort Stack",
       progress: 60,
     },
     {
-      name: "Game 2",
+      name: "Tracer",
       progress: 80,
     },
   ],

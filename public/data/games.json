@@ -1,30 +1,29 @@
 [
 	{
-		"imageUrl": "/images/1.jpg",
+		"imageUrl": "/images/SortStack Poster.png",
 		"name": "Sort Stack",
 		"rehabTarget": "Field of Vision",
+		"description": "Players have to sort a pile of blocks by their respective color",
 		"difficulty": "Easy",
+		"mode": "All",
 		"gameId": "game1"
 	},
 	{
-		"imageUrl": "/images/2.jpg",
-		"name": "Draw the Line",
+		"imageUrl": "/images/Tracer Poster.png",
+		"name": "Tracer",
 		"rehabTarget": "Memory",
+		"description": "Players have to trace various odd shapes with accuracy",
 		"difficulty": "Medium",
+		"mode": "All",
 		"gameId": "game2"
 	},
 	{
-		"imageUrl": "/images/3.jpg",
-		"name": "Whack a mole",
+		"imageUrl": "/images/Hammer Time Poster.png",
+		"name": "Hammer Time",
 		"rehabTarget": "Hand-eye Coordination",
+		"description": "Players have to hammer \"moles\" within time limit",
 		"difficulty": "Hard",
-		"gameId": "game3"
-	},
-	{
-		"imageUrl": "/images/3.jpg",
-		"name": "Whack a mole",
-		"rehabTarget": "Hand-eye Coordination",
-		"difficulty": "Hard",
+		"mode": "All",
 		"gameId": "game3"
 	}
 ]
