@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Content from '../../../components/content';
-import VrGameCard from '../../../components/game/VRGameCard';
+import VrGameCard from '../../../components/game/VrGameCard';
 
 export default function GamesPage() {
   const [games, setGames] = useState([]);
@@ -21,7 +21,7 @@ export default function GamesPage() {
 
   return (
     <Content title="Games" >
-      <div className="container mx-auto px-4">
+      <div className="container px-4 mx-auto">
         <div className="flex flex-wrap -mx-2">
           {games.map((game, index) => (
             <VrGameCard key={index} game={game} />

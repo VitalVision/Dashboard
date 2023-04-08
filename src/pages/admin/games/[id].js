@@ -10,6 +10,7 @@ export default function GamesPage() {
 
   async function fetchGameData() {
     try {
+      if (!id) return;
       const res = await fetch(`/api/games/${id}`);
       const data = await res.json();
       console.log(data)

@@ -5,7 +5,8 @@
 		"rehabTarget": "Field of Vision",
 		"description": "Players have to sort a pile of blocks by their respective color",
 		"difficulty": "Easy",
-		"mode": "All",
+		"leftHand": true,
+		"rightHand": true,
 		"gameId": "game1"
 	},
 	{
@@ -14,7 +15,8 @@
 		"rehabTarget": "Memory",
 		"description": "Players have to trace various odd shapes with accuracy",
 		"difficulty": "Medium",
-		"mode": "All",
+		"leftHand": true,
+		"rightHand": true,
 		"gameId": "game2"
 	},
 	{
@@ -23,7 +25,8 @@
 		"rehabTarget": "Hand-eye Coordination",
 		"description": "Players have to hammer \"moles\" within time limit",
 		"difficulty": "Hard",
-		"mode": "All",
+		"leftHand": true,
+		"rightHand": true,
 		"gameId": "game3"
 	}
 ]
