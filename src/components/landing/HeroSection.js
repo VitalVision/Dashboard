@@ -28,7 +28,7 @@ const HeroSection = () => {
 								</div>
 							</p>
 							<button className="bg-blue-600 hover:bg-blue-700 py-2 px-4 rounded-lg text-white text-2xl">
-								<Link href="/admin">Try It Now</Link>
+								<Link href="/patient/1/dashboard">Try It Now</Link>
 							</button>
 						</div>
 					</div>
