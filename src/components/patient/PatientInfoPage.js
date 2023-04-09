@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Disclosure, Combobox, Transition } from "@headlessui/react";
 import { useForm } from "react-hook-form";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
+import SortStackAnalytics from "../analytics/SortStackAnalytics";
 
 const ListMedicalDisabilities = [
 	{ id: 1, name: "None" },
@@ -167,7 +168,7 @@ const PatientInfoPage = ({ patientData }) => {
 						<h3 className="text-lg font-semibold mb-2">Overall Progress</h3>
 						<div
 							style={{ width: `${overallProgressPercentage}%` }}
-							className="shadow-none flex flex-col text-center whitespace-nowrap rounded text-white justify-center bg-blue-500">
+							className="shadow-none flex flex-col text-center whitespace-nowrap rounded text-white justify-center bg-blue-500 bg-gradient-to-r from-cyan-500 to-blue-500 h-8">
 							{overallProgressPercentage}% Complete
 						</div>
 						<p className="text-right text-gray-500 sr-only">
@@ -206,7 +207,7 @@ const PatientInfoPage = ({ patientData }) => {
 										<span>{open ? "-" : "+"}</span>
 									</Disclosure.Button>
 									<Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
-										{/* Render the chart for the game progress here */}
+										{game.data}
 									</Disclosure.Panel>
 								</>
 							)}
