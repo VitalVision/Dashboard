@@ -1,6 +1,7 @@
 import { Line, Pie } from "react-chartjs-2";
 import Link from "next/link";
 import Chart from "chart.js/auto"; // this is important to allow the charts to work
+import { useEffect, useState } from "react";
 
 const pieChartData = {
 	labels: ["Blocks Stacked", "Blocks Missed", "Blocks Dropped"],
@@ -28,6 +29,19 @@ const lineChartData = {
 	],
 };
 export default function SortStackAnalytics() {
+	const [stats, setStats] = useState(undefined);
+
+	const fetchStats = async () => {
+		const res = await fetch("/api/games/stats");
+		const data = await res.json();
+		setStats(data);
+	};
+
+	useEffect(() => {
+		fetchStats();
+		console.log(stats);
+	}, []);
+
 	return (
 		<div className="container mx-auto px-4">
 			<div className="mb-8">

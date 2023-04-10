@@ -3,7 +3,13 @@ import styles from "./GamesSection.module.css";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-const GameCard = ({ title, description, imageUrl }) => (
+const gamesMap = {
+	game1: "Top",
+	game2: "center",
+	game3: "bottom",
+};
+
+const GameCard = ({ title, description, imageUrl, gameId }) => (
 	<div class={styles.card}>
 		<div class={styles.content}>
 			<div class={styles.front}>
@@ -12,7 +18,7 @@ const GameCard = ({ title, description, imageUrl }) => (
 					alt={title}
 					layout="fill"
 					objectFit="cover"
-					objectPosition="center"
+					objectPosition={gamesMap[gameId]}
 				/>
 			</div>
 			<div class={styles.back}>
@@ -26,6 +32,8 @@ const GameCard = ({ title, description, imageUrl }) => (
 
 const GamesSection = () => {
 	const [games, setGames] = useState([]);
+
+	console.log(games);
 
 	async function fetchData() {
 		try {
@@ -43,12 +51,12 @@ const GamesSection = () => {
 
 	return (
 		<section className="relative container mx-auto px-4 py-12">
-			<h2 className="relative text-center text-3xl md:text-4xl font-semibold mb-8">
+			<h2 className="text-center text-3xl md:text-4xl font-semibold mb-8">
 				Our Games
 			</h2>
-			<div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative h-[30vh]">
+			<div className="grid grid-cols-1 md:grid-cols-3 gap-4 relative md:h-[30vh] h-screen">
 				{games.map((game, index) => (
-					<div key={index} className={styles.flipCard}>
+					<div key={index} className="w-full">
 						<GameCard {...game} />
 					</div>
 				))}
