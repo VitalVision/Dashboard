@@ -31,16 +31,23 @@ const lineChartData = {
 export default function SortStackAnalytics() {
 	const [stats, setStats] = useState(undefined);
 
-	const fetchStats = async () => {
-		const res = await fetch("/api/games/stats");
-		const data = await res.json();
-		setStats(data);
-	};
+	async function getStats() {
+		try {
+			const res = await fetch("/api/games/game1");
+			const data = await res.json();
+			setStats(data);
+		} catch (err) {
+			console.error("Error fetching stats:", err);
+		}
+	}
 
 	useEffect(() => {
-		fetchStats();
-		console.log(stats);
+		getStats();
 	}, []);
+
+	if (!stats) return <p>Loading...</p>;
+
+	const { difficulty, leftHand, rightHand } = stats;
 
 	return (
 		<div className="container mx-auto px-4">
@@ -48,14 +55,18 @@ export default function SortStackAnalytics() {
 				<h2 className="text-xl font-semibold mb-2">Game Settings</h2>
 				<div className="flex space-x-4">
 					<div className="bg-blue-600 text-white px-4 py-2 rounded  w-full text-center">
-						Easy
+						{difficulty}
 					</div>
-					<div className="bg-blue-600 text-white px-4 py-2 rounded  w-full text-center">
-						Left hand enabled
-					</div>
-					<div className="bg-blue-600 text-white px-4 py-2 rounded  w-full text-center">
-						Right hand enabled
-					</div>
+					{leftHand ? (
+						<div className="bg-blue-600 text-white px-4 py-2 rounded  w-full text-center">
+							Left hand enabled
+						</div>
+					) : null}
+					{rightHand ? (
+						<div className="bg-blue-600 text-white px-4 py-2 rounded  w-full text-center">
+							Right hand enabled
+						</div>
+					) : null}
 				</div>
 			</div>
 			<div className="grid grid-cols-1 md:grid-cols-3 gap-4">
