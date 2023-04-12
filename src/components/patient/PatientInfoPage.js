@@ -197,7 +197,7 @@ const PatientInfoPage = ({ patientData }) => {
 					</button>
 				</form>
 				<div className="">
-					<h3 className="text-lg font-semibold mb-2">Games Played</h3>
+					<h3 className="text-lg font-semibold mb-2">Games Analytics</h3>
 					{gamesPlayed.map((game, index) => (
 						<Disclosure key={index}>
 							{({ open }) => (

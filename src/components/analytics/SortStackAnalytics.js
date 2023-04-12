@@ -1,4 +1,4 @@
-import { Line, Pie } from "react-chartjs-2";
+import { Line, Pie, Scatter } from "react-chartjs-2";
 import Link from "next/link";
 import Chart from "chart.js/auto"; // this is important to allow the charts to work
 import { useEffect, useState } from "react";
@@ -28,14 +28,64 @@ const lineChartData = {
 		},
 	],
 };
+
+let scatterPlotData = {
+	labels: ["Level 1", "Level 2", "Level 3", "Level 4", "Level 5", "Level 6"],
+	datasets: [
+		{
+			label: "Overall Game Stats",
+			data: [
+				{ x: 1, y: 2 },
+				{ x: 2, y: 3 },
+				{ x: 3, y: 4 },
+				{ x: 4, y: 5 },
+				{ x: 5, y: 6 },
+				{ x: 6, y: 7 },
+				{ x: 7, y: 8 },
+				{ x: 8, y: 9 },
+				{ x: 9, y: 1 },
+			],
+			backgroundColor: "rgba(255, 99, 132, 0.2)",
+			borderColor: "rgba(255, 99, 132, 1)",
+			borderWidth: 1,
+		},
+	],
+};
+
+const scatterOptions = {
+	scales: {
+		xAxes: [
+			{
+				ticks: {
+					min: 1,
+					max: 9,
+					stepSize: 1,
+				},
+			},
+		],
+	},
+};
+
+function mapData(data) {
+	return data.map((item) => ({
+		x: parseInt(item.level),
+		y: parseInt(item.timetocompletion),
+	}));
+}
 export default function SortStackAnalytics() {
-	const [stats, setStats] = useState(undefined);
+	const [settings, setSettings] = useState(undefined);
+	const [stats, setStats] = useState(scatterPlotData);
 
 	async function getStats() {
 		try {
 			const res = await fetch("/api/games/game1");
 			const data = await res.json();
-			setStats(data);
+
+			const res2 = await fetch("/api/games/stats");
+			const data2 = await res2.json();
+
+			setSettings(data);
+			setStats(mapData(data2));
 		} catch (err) {
 			console.error("Error fetching stats:", err);
 		}
@@ -45,9 +95,12 @@ export default function SortStackAnalytics() {
 		getStats();
 	}, []);
 
-	if (!stats) return <p>Loading...</p>;
+	if (!settings || !stats) return <p>Loading...</p>;
 
-	const { difficulty, leftHand, rightHand } = stats;
+	console.log(stats);
+	scatterPlotData.datasets[0].data = stats;
+
+	const { difficulty, leftHand, rightHand } = settings;
 
 	return (
 		<div className="container mx-auto px-4">
@@ -79,6 +132,7 @@ export default function SortStackAnalytics() {
 					<Line data={lineChartData} />
 				</div>
 			</div>
+			<Scatter data={scatterPlotData} options={scatterOptions} />
 		</div>
 	);
 }
