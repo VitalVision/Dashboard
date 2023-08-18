@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps, router }) {
 		return (
 			<>
 				<Head>
-					<title>Vital Vision</title>
+					<title>Semper Stroke</title>
 				</Head>
 				<Component {...pageProps} />
 			</>
@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps, router }) {
 	return (
 		<>
 			<Head>
-				<title>Vital Vision</title>
+				<title>Semper Stroke</title>
 			</Head>
 			<DashboardLayout>
 				<Component {...pageProps} />

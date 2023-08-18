@@ -1,7 +1,7 @@
 [
 	{
-		"name": "John Doe",
-		"picture": "/images/1.jpg",
+		"name": "John Anderson",
+		"picture": "/images/john.jpg",
 		"nextCheckupDate": "2023-04-15",
 		"progressPercentage": 75,
 		"patientId": 1

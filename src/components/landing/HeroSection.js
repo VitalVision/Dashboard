@@ -9,8 +9,8 @@ const HeroSection = () => {
 				<div className="relative h-screen">
 					<div className="container mx-auto px-4 h-full flex items-center justify-center flex-col relative">
 						<img
-							src="/images/logo_words_dark.png"
-							alt="vital vision"
+							src="/images/logo_words_light.png"
+							alt="Semper Stroke"
 							className="mx-auto top-0 left-0 right-0 bottom-0 absolute h-1/4 md:h-1/3"
 						/>
 						<div className="max-w-xl md:max-w-3xl text-center text-white-800 ">

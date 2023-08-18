@@ -113,7 +113,7 @@ export default function landing() {
 							<i className="fab fa-instagram"></i>
 						</a>
 					</div>
-					<p>© {new Date().getFullYear()} Vital Vision. All rights reserved.</p>
+					<p>© {new Date().getFullYear()} Semper Stroke. All rights reserved.</p>
 				</div>
 			</footer>
 		);

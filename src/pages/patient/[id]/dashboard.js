@@ -4,8 +4,8 @@ import Content from "../../../components/content";
 import PatientInfoPage from "../../../components/patient/PatientInfoPage";
 
 const patientData = {
-	name: "John Doe",
-	picture: "/images/1.jpg",
+	name: "John Anderson",
+	picture: "/images/john.jpg",
 	nextCheckupDate: "2023-04-15",
 	overallProgressPercentage: 75,
 	patientId: 1,
